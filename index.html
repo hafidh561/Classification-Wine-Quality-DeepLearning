@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Wine Quality Red - Predict Quality</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+			integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center pt-4 pb-4">
+					<h1>Wine Quality Red - Predict Quality</h1>
+				</div>
+			</div>
+			<form class="pb-4 data-form">
+				<div class="form-group">
+					<label for="fixedAcidity"
+						>Fixed Acidity (tartaric acid - g/dm3)
+					</label>
+					<input
+						type="number"
+						step="any"
+						class="form-control"
+						id="fixedAcidity"
+						aria-describedby="fixedAcidityHelp"
+						placeholder="Input Fixed Acidity"
+						required
+					/>
+					<small id="fixedAcidityHelp" class="form-text text-muted"
+						>Most acids involved with wine or fixed or nonvolatile (do not
+						evaporate readily)</small
+					>
+				</div>
+				<div class="form-group">
+					<label for="volatileAcidity"
+						>Volatile Acidity (acetic acid - g/dm3)
+					</label>
+					<input
+						type="number"
+						step="any"
+						class="form-control"
+						id="volatileAcidity"
+						aria-describedby="volatileAcidityHelp"
+						placeholder="Input Volatile Acidity"
+						required
+					/>
+					<small id="volatileAcidityHelp" class="form-text text-muted"
+						>The amount of acetic acid in wine, which at too high of levels can
+						lead to an unpleasant, vinegar taste</small
+					>
+				</div>
+				<div class="form-group">
+					<label for="citricAcid">Citric Acid (g/dm3) </label>
+					<input
+						type="number"
+						step="any"
+						class="form-control"
+						id="citricAcid"
+						aria-describedby="citricAcidHelp"
+						placeholder="Input Citric Acid"
+						required
+					/>
+					<small id="citricAcidHelp" class="form-text text-muted"
+						>The amount of acetic acid in wine, which at too high of levels can
+						lead to an unpleasant, vinegar taste</small
+					>
+				</div>
+				<div class="form-group">
+					<label for="residualSugar">Residual Sugar (g/dm3) </label>
+					<input
+						type="number"
+						step="any"
+						class="form-control"
+						id="residualSugar"
+						aria-describedby="residualSugarHelp"
+						placeholder="Input Residual Sugar"
+						required
+					/>
+					<small id="residualSugarHelp" class="form-text text-muted"
+						>The amount of sugar remaining after fermentation stops, it’s rare
+						to find wines with less than 1 gram/liter and wines with greater
+						than 45 grams/liter are considered sweet</small
+					>
+				</div>
+				<div class="form-group">
+					<label for="chlorides">Chlorides (sodium chloride - g/dm3) </label>
+					<input
+						type="number"
+						step="any"
+						class="form-control"
+						id="chlorides"
+						aria-describedby="chloridesHelp"
+						placeholder="Input Chlorides"
+						required
+					/>
+					<small id="chloridesHelp" class="form-text text-muted"
+						>The amount of salt in the wine</small
+					>
+				</div>
+				<div class="form-group">
+					<label for="freeSulfurDioxide">Free Sulfur Dioxide (mg/dm3) </label>
+					<input
+						type="number"
+						step="any"
+						class="form-control"
+						id="freeSulfurDioxide"
+						aria-describedby="freeSulfurDioxideHelp"
+						placeholder="Input Free Sulfur Dioxide"
+						required
+					/>
+					<small id="freeSulfurDioxideHelp" class="form-text text-muted"
+						>the free form of SO2 exists in equilibrium between molecular SO2
+						(as a dissolved gas) and bisulfite ion; it prevents microbial growth
+						and the oxidation of wine</small
+					>
+				</div>
+				<div class="form-group">
+					<label for="totalSulfurDioxide">Total Sulfur Dioxide (mg/dm3) </label>
+					<input
+						type="number"
+						step="any"
+						class="form-control"
+						id="totalSulfurDioxide"
+						aria-describedby="totalSulfurDioxideHelp"
+						placeholder="Input Total Sulfur Dioxide"
+						required
+					/>
+					<small id="totalSulfurDioxideHelp" class="form-text text-muted"
+						>Amount of free and bound forms of S02; in low concentrations, SO2
+						is mostly undetectable in wine, but at free SO2 concentrations over
+						50 ppm, SO2 becomes evident in the nose and taste of wine</small
+					>
+				</div>
+				<div class="form-group">
+					<label for="density">Density (g/cm3) </label>
+					<input
+						type="number"
+						step="any"
+						class="form-control"
+						id="density"
+						aria-describedby="densityHelp"
+						placeholder="Input Density"
+						required
+					/>
+					<small id="densityHelp" class="form-text text-muted"
+						>The density of water is close to that of water depending on the
+						percent alcohol and sugar content</small
+					>
+				</div>
+				<div class="form-group">
+					<label for="ph">pH</label>
+					<input
+						type="number"
+						min="0"
+						max="14"
+						step="any"
+						class="form-control"
+						id="ph"
+						aria-describedby="phHelp"
+						placeholder="Input ph"
+						required
+					/>
+					<small id="phHelp" class="form-text text-muted"
+						>Describes how acidic or basic a wine is on a scale from 0 (very
+						acidic) to 14 (very basic); most wines are between 3-4 on the pH
+						scale</small
+					>
+				</div>
+				<div class="form-group">
+					<label for="sulphates">Sulphates (potassium sulphate - g/dm3) </label>
+					<input
+						type="number"
+						step="any"
+						class="form-control"
+						id="sulphates"
+						aria-describedby="phHelp"
+						placeholder="Input Sulphates"
+						required
+					/>
+					<small id="sulphatesHelp" class="form-text text-muted"
+						>A wine additive which can contribute to sulfur dioxide gas (S02)
+						levels, wich acts as an antimicrobial and antioxidant</small
+					>
+				</div>
+				<div class="form-group">
+					<label for="alcohol">Alcohol (% by volume) </label>
+					<input
+						type="number"
+						step="any"
+						class="form-control"
+						id="alcohol"
+						aria-describedby="phHelp"
+						placeholder="Input Alcohol"
+						required
+					/>
+					<small id="alcoholHelp" class="form-text text-muted"
+						>The percent alcohol content of the wine</small
+					>
+				</div>
+
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+			<div class="row pb-4 pt-3">
+				<div class="col-md-12 text-center">
+					<small class="text-muted">Quality Between 0 and 10</small>
+					<h1>Quality</h1>
+				</div>
+				<div class="col-md-12 text-center">
+					<h1 class="result">0</h1>
+				</div>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+		<script>
+			$('.data-form').submit(function (e) {
+				e.preventDefault();
+				// Take Data Form
+				$fixedAcidity = $('#fixedAcidity').val();
+				$fixedAcidity = parseFloat($fixedAcidity);
+
+				$volatileAcidity = $('#volatileAcidity').val();
+				$volatileAcidity = parseFloat($volatileAcidity);
+
+				$citricAcid = $('#citricAcid').val();
+				$citricAcid = parseFloat($citricAcid);
+
+				$residualSugar = $('#residualSugar').val();
+				$residualSugar = parseFloat($residualSugar);
+
+				$chlorides = $('#chlorides').val();
+				$chlorides = parseFloat($chlorides);
+
+				$freeSulfurDioxide = $('#freeSulfurDioxide').val();
+				$freeSulfurDioxide = parseFloat($freeSulfurDioxide);
+
+				$totalSulfurDioxide = $('#totalSulfurDioxide').val();
+				$totalSulfurDioxide = parseFloat($totalSulfurDioxide);
+
+				$density = $('#density').val();
+				$density = parseFloat($density);
+
+				$ph = $('#ph').val();
+				$ph = parseFloat($ph);
+
+				$sulphates = $('#sulphates').val();
+				$sulphates = parseFloat($sulphates);
+
+				$alcohol = $('#alcohol').val();
+				$alcohol = parseFloat($alcohol);
+
+				$.ajax({
+					url: 'https://winequalityapi.herokuapp.com/',
+					type: 'post',
+					data: {
+						fixed_acidity: $fixedAcidity,
+						volatile_acidity: $volatileAcidity,
+						citric_acid: $citricAcid,
+						residual_sugar: $residualSugar,
+						chlorides: $chlorides,
+						free_sulfur_dioxide: $freeSulfurDioxide,
+						total_sulfur_dioxide: $totalSulfurDioxide,
+						density: $density,
+						ph: $ph,
+						sulphates: $sulphates,
+						alcohol: $alcohol,
+					},
+					success: function (response) {
+						$('.result').html(response['predict']);
+					},
+				});
+			});
+		</script>
+	</body>
+</html>
