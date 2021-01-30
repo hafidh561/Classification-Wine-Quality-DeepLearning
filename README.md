@@ -11,7 +11,7 @@ Hello everyone, i make deep learning to predict **Quality** of **Wine Red**. I u
 3. You can use virtual environments, if you want
 4. Type in your terminal `pip install -r requirements.txt -y` and wait untill done
 5. After that, type in your terminal `python app.py`
-6. Open [**index.html**](./index.html) and input some data
+6. Open [**index.html**](./deploy_ml/index.html) and input some data
 
 ---
 
