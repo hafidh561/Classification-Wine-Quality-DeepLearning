@@ -48,7 +48,7 @@ class Predict(Resource):
             args['sulphates'],
             args['alcohol'],
         )
-        return {'predict': predict}, 201
+        return {'predict': float(predict)}, 201
 
 
 api.add_resource(Predict, '/')
